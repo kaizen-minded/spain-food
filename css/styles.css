@@ -1,19 +1,83 @@
-* {
-  padding: 0;
-  margin: 0;
+/* ------------------ */
+/* Reset              */
+/* ------------------ */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
+/* Reset margins */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+/* set up the body */
+
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* make images easier */
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ------------------- */
+/* Utility classes     */
+/* ------------------- */
+
 .container {
-  width: 90%;
-  max-width: 1400px;
-  margin: 0 auto;
+  padding-inline: 2em; /* width: 90%; */
+  max-width: 88rem; /* max-width: 1400px; */
+  margin-inline: auto; /* margin: 0 auto; */
+}
+
+:root {
+  --gap: 2rem;
 }
 
 .flex {
   display: flex;
+  gap: var(--gap, 1rem);
 }
 
-.nav-menu {
-  display: flex;
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
 }
