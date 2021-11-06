@@ -1,3 +1,13 @@
+/* ------------------- */
+/* Custom Properties   */
+/* ------------------- */
+
+:root {
+  --clr-dark: 0, 0%, 6%;
+  --clr-accent: 357, 75%, 49%;
+  --clr-white: 0, 0%, 100%;
+}
+
 /* ------------------ */
 /* Reset              */
 /* ------------------ */
@@ -80,4 +90,30 @@ select {
 .grid {
   display: grid;
   gap: var(--gap, 1rem);
+}
+
+/* colors */
+
+.bg-dark {
+  background-color: hsl(var(--clr-dark));
+}
+
+.bg-accent {
+  background-color: hsl(var(--clr-accent));
+}
+
+.bg-white {
+  background-color: hsl(var(--clr-white));
+}
+
+.text-dark {
+  color: hsl(var(--clr-dark));
+}
+
+.text-accent {
+  color: hsl(var(--clr-accent));
+}
+
+.text-white {
+  color: hsl(var(--clr-white));
 }
